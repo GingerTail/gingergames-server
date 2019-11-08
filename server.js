@@ -9,7 +9,7 @@ const connectionString = `mongodb+srv://gingerAdmin:Password.123@gingergames-2fp
 
 const server = express();
 server.use(cors())
-server.set("port", 3450)
+server.set("port",process.env.PORT || 3450)
 server.use(cors())
 server.use(passport.initialize())
 server.use(bodyParser.json())
