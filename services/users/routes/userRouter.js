@@ -5,9 +5,7 @@ const passporto = require("passport")
 
 const router = express.Router()
 
-router.get("/", async(req,res)=>{
-    res.send(await User.find({}))
-})
+
 
 router.post("/register", async(req,res)=>{
     delete req.body.role;
