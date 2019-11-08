@@ -8,7 +8,6 @@ const passport=require("passport")
 const connectionString = `mongodb+srv://gingerAdmin:Password.123@gingergames-2fpe3.mongodb.net/test?retryWrites=true&w=majority`
 
 const server = express();
-server.use(cors())
 server.set("port",process.env.PORT || 3450)
 server.use(cors())
 server.use(passport.initialize())
