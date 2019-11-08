@@ -16,10 +16,13 @@ server.use(bodyParser.json())
 server.use("/games", gamesRouter)
 
 
-mongoose.connect(connectionString, {
+const connection = mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     dbName:"gingerdb"
+})
+connection.then(db =>{
+    console.log("database connected")
 })
     server.listen(server.get("port"), () =>{
         console.log("SERVER IS RUNNING ON " + server.get("port"))
